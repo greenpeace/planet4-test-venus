@@ -3,7 +3,6 @@ version: 2.1
 defaults: &defaults
   docker:
     - image: greenpeaceinternational/p4-builder:latest
-
 job_environments:
   common_environment: &common_environment
     APP_HOSTPATH: test-venus
@@ -115,7 +114,6 @@ job_definitions:
       - store_artifacts:
           path: /app/backstop_data
 
-
 jobs:
   build-branch:
     <<: *defaults
@@ -148,7 +146,6 @@ jobs:
       <<: *common_environment
       <<: *develop_environment
     <<: *backstop_compare_steps
-
   data-sync:
     <<: *defaults
     environment:
@@ -165,6 +162,7 @@ jobs:
             ${HOME}/scripts/activate-gcloud-account.sh
       - run: /home/circleci/sync_to_test_site.sh
 
+
 workflow_definitions:
   develop_common: &develop_common
     context: org-global
@@ -180,11 +178,10 @@ workflows:
           <<: *develop_common
       - build-branch:
           <<: *develop_common
-          requires:
-            - backstop-history-develop
       - deploy-develop:
           <<: *develop_common
           requires:
+            - backstop-history-develop
             - build-branch
       - data-sync:
           <<: *develop_common
