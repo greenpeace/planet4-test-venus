@@ -23,6 +23,7 @@ job_environments:
     APP_HOSTPATH: test-venus
     CONTAINER_PREFIX: planet4-test-venus
     WP_DB_NAME_PREFIX: planet4-test-venus_wordpress
+    WP_VERSION: 5.6-RC1
   develop_environment: &develop_environment
     APP_ENVIRONMENT: development
     APP_HOSTNAME: www-dev.greenpeace.org

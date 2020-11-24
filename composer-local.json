@@ -3,7 +3,8 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-plugin-gutenberg-blocks" : "dev-planet-5640"
+		"greenpeace/planet4-master-theme" : "dev-wp55",
+		"greenpeace/planet4-plugin-gutenberg-blocks" : "dev-planet-5498"
 	},
 	"data_from": "international",
 	"scripts": {
