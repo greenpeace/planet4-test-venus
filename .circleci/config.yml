@@ -23,7 +23,6 @@ job_environments:
     APP_HOSTPATH: test-venus
     CONTAINER_PREFIX: planet4-test-venus
     WP_DB_NAME_PREFIX: planet4-test-venus_wordpress
-    WP_VERSION: 5.6-RC1
   develop_environment: &develop_environment
     APP_ENVIRONMENT: development
     APP_HOSTNAME: www-dev.greenpeace.org
@@ -160,7 +159,10 @@ job_definitions:
       - attach_workspace:
           at: /tmp/workspace
       - run: activate-gcloud-account.sh
-      - run: BUILD_TAG=build-$(cat /tmp/workspace/var/circle-build-num) make deploy
+      - run: make prepare-helm
+      - run: make backup
+      - run: BUILD_TAG=build-$(cat /tmp/workspace/var/circle-build-num) make deploy-helm
+      - run: make post-deploy
       - when:
           condition: << parameters.is_prod >>
           steps:
