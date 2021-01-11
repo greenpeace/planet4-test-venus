@@ -1,13 +1,13 @@
 {
-	"name": "greenpeace/planet4-test-venus",
-	"description": "Greenpeace P4 test-venus",
-	"license": "MIT",
-	"require": {
-		"greenpeace/planet4-master-theme" : "dev-planet-4590",
-		"greenpeace/planet4-plugin-gutenberg-blocks" : "dev-planet-4590"
-	},
-	"data_from": "international",
-	"scripts": {
-		"site:custom": []
-	}
+    "name": "greenpeace/planet4-test-venus",
+    "description": "Greenpeace P4 test-venus",
+    "license": "MIT",
+    "require": {
+        "greenpeace/planet4-master-theme": "dev-planet-4590",
+        "greenpeace/planet4-plugin-gutenberg-blocks": "dev-planet-4590"
+    },
+    "data_from": "international",
+    "scripts": {
+        "site:custom": []
+    }
 }
