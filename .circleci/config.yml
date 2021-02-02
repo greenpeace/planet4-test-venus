@@ -74,7 +74,7 @@ commands:
 job_definitions:
   visualtests_reference_steps: &visualtests_reference_steps
     docker:
-      - image: greenpeaceinternational/planet4-backstop:latest
+      - image: greenpeaceinternational/planet4-backstop:selectors
         auth:
           <<: *docker_auth
     working_directory: /src
@@ -92,7 +92,7 @@ job_definitions:
 
   visualtests_compare_steps: &visualtests_compare_steps
     docker:
-      - image: greenpeaceinternational/planet4-backstop:latest
+      - image: greenpeaceinternational/planet4-backstop:selectors
         auth:
           <<: *docker_auth
     working_directory: /src
