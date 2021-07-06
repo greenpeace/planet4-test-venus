@@ -293,7 +293,7 @@ workflows:
           <<: *on_develop_commit
           requires:
             - build-develop
-            - visualtests-reference-develop
+            #- visualtests-reference-develop
       - test-develop:
           <<: *on_develop_commit
           requires:
