@@ -1,14 +1,15 @@
 {
-	"name": "greenpeace/planet4-test-venus",
-	"description": "Greenpeace P4 test-venus",
-	"license": "MIT",
-	"require": {
-		"greenpeace/planet4-master-theme": "dev-master",
-		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-master"
-	},
-	"data_from": "international",
-	"scripts": {
-		"site:custom": []
-	},
-	"repositories": []
+    "name": "greenpeace/planet4-test-venus",
+    "description": "Greenpeace P4 test-venus",
+    "license": "MIT",
+    "require": {
+        "greenpeace/planet4-master-theme": "dev-master",
+        "greenpeace/planet4-plugin-gutenberg-blocks": "dev-master",
+        "greenpeace/planet4-child-theme-handbook" : "dev-master"
+    },
+    "data_from": "international",
+    "scripts": {
+        "site:custom": []
+    },
+    "repositories": []
 }
