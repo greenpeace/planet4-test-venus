@@ -3,10 +3,10 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-master",
+		"greenpeace/planet4-master-theme": "dev-PLANET-6189_new_footer_design",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-master"
 	},
-	"data_from": "international",
+	"data_from": "argentina",
 	"scripts": {
 		"site:custom": []
 	},
