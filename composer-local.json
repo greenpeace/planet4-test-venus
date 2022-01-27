@@ -6,7 +6,7 @@
 		"greenpeace/planet4-master-theme": "7",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "7"
 	},
-	"data_from": "aotearoa",
+	"data_from": "canada",
 	"scripts": {
 		"site:custom": []
 	},
