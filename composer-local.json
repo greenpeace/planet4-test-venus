@@ -3,54 +3,11 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "7",
-		"greenpeace/planet4-plugin-gutenberg-blocks": "7"
+		"greenpeace/planet4-master-theme": "dev-settings-in-cookies-bar",
+		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-always-enable-necessary-cookies"
 	},
 	"data_from": "denmark",
 	"scripts": {
 		"site:custom": []
-	},
-	"extra": {
-		"wp-version": "5.9"
-	},
-	"repositories": [
-		{
-			"type": "package",
-			"package": {
-				"name": "greenpeace/planet4-plugin-gutenberg-blocks",
-				"type": "wordpress-plugin",
-				"autoload": null,
-				"extra": null,
-				"version": 7,
-				"dist": {
-					"type": "zip",
-					"url": "https://storage.googleapis.com/planet4-packages/planet4-plugin-gutenberg-blocks/dc787ef07f85642c16386ffc994713f5393bb7be.zip"
-				}
-			}
-		},
-		{
-			"type": "package",
-			"package": {
-				"name": "greenpeace/planet4-master-theme",
-				"type": "wordpress-theme",
-				"autoload": {
-					"psr-4": {
-						"P4\\MasterTheme\\": "src/"
-					}
-				},
-				"extra": {
-					"installer-paths": {
-						"vendor/plugins/{$name}/": [
-							"type:wordpress-plugin"
-						]
-					}
-				},
-				"version": 7,
-				"dist": {
-					"type": "zip",
-					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/3bb1698136c3aeba3fe026cd45316f658a207932.zip"
-				}
-			}
-		}
-	]
+	}
 }
