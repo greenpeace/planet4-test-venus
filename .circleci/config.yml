@@ -33,6 +33,8 @@ job_environments:
     HELM_RELEASE: planet4-test-venus
     WP_DB_NAME: planet4-test-venus_wordpress_develop
     WP_STATELESS_BUCKET: planet4-test-venus-stateless-develop
+    GIT_REF: wp-stateless-3.2.0
+    GIT_BRANCH: wp-stateless-3.2.0
 
 
 commands:
