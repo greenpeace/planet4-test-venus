@@ -12,7 +12,7 @@ docker_auth: &docker_auth
 
 defaults: &defaults
   docker:
-    - image: greenpeaceinternational/p4-builder:planet-6841-full-dump
+    - image: greenpeaceinternational/p4-builder:planet-6841-gf-dump
       auth:
         <<: *docker_auth
 
@@ -281,7 +281,7 @@ jobs:
           name: Export DB
           command: sql_create_sync_file.sh
       - store_artifacts:
-          path: "content/full-db-export.sql.gz"
+          path: "content/gf-db-export.sql.gz"
 
 
 workflow_definitions:
