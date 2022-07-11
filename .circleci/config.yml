@@ -12,7 +12,7 @@ docker_auth: &docker_auth
 
 defaults: &defaults
   docker:
-    - image: greenpeaceinternational/p4-builder:latest
+    - image: greenpeaceinternational/p4-builder:planet-6841-full-dump
       auth:
         <<: *docker_auth
 
@@ -33,9 +33,6 @@ job_environments:
     HELM_RELEASE: planet4-test-venus
     WP_DB_NAME: planet4-test-venus_wordpress_develop
     WP_STATELESS_BUCKET: planet4-test-venus-stateless-develop
-    GIT_REF: wp-stateless-3.2.0
-    GIT_BRANCH: wp-stateless-3.2.0
-
 
 commands:
   approve_job:
@@ -250,6 +247,7 @@ jobs:
       <<: *common_environment
       <<: *develop_environment
     <<: *deploy_steps
+
   data-sync:
     <<: *defaults
     environment:
@@ -265,6 +263,26 @@ jobs:
           command: |
             activate-gcloud-account.sh
       - run: sync_to_test_site.sh
+
+  test-dump:
+    <<: *defaults
+    environment:
+      <<: *common_environment
+      <<: *develop_environment
+    working_directory: /tmp/workspace/src
+    steps:
+      - checkout
+      - run:
+          name: Configure
+          command: |
+            activate-gcloud-account.sh
+            echo $SQLPROXY_KEY | base64 -d > key.json
+      - run:
+          name: Export DB
+          command: sql_create_sync_file.sh
+      - store_artifacts:
+          path: "content/full-db-export.sql.gz"
+
 
 workflow_definitions:
   on_develop_commit: &on_develop_commit
@@ -297,3 +315,5 @@ workflows:
           <<: *on_develop_commit
           requires:
             - deploy-develop
+      - test-dump:
+          <<: *on_develop_commit
