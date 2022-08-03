@@ -3,7 +3,7 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-PLANET-6768_fix_up_styles_to_issues_pattern",
-		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-feature/add-spacing-feature-to-theme"
+		"greenpeace/planet4-master-theme": "dev-feature/add-spacing-feature-to-theme",
+		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-PLANET-6768_fix_up_styles_to_issues_pattern"
 	}
 }
