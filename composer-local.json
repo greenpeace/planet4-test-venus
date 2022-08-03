@@ -5,5 +5,9 @@
 	"require": {
 		"greenpeace/planet4-master-theme": "dev-feature/add-spacing-feature-to-theme",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-PLANET-6768_fix_up_styles_to_issues_pattern"
+	},
+  "data_from": "international",
+	"scripts": {
+		"site:custom": []
 	}
 }
