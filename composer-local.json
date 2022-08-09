@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"require": {
 		"greenpeace/planet4-master-theme": "dev-master",
-		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-PLANET-6768_fix_up_styles_to_issues_pattern"
+		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-fix-covers-carousel-in-safari"
 	},
   "data_from": "international",
 	"scripts": {
