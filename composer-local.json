@@ -8,6 +8,9 @@
 	},
 	"data_from": "international",
 	"scripts": {
-		"site:custom": []
+		"install:plugin-wpimport": "wp plugin install --activate https://storage.googleapis.com/planet4-3rdparty-plugins/wp-all-import-pro_4.6.3.zip",
+		"site:custom": [
+			"@install:plugin-wpimport"
+		]
 	}
 }
