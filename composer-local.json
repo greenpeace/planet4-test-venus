@@ -3,8 +3,8 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-main",
-		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-main"
+		"greenpeace/planet4-master-theme": "dev-PLANET-7508_fix-highlighted-cta-layout",
+		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-PLANET-7508_fix-highlighted-cta-layout"
 	},
 	"scripts": {
 		"install:plugin-wpimport": "wp plugin install --activate https://storage.googleapis.com/planet4-3rdparty-plugins/wp-all-import-pro_4.8.5.zip",
