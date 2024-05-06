@@ -3,7 +3,7 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-PLANET-7508_fix-highlighted-cta-layout",
+		"greenpeace/planet4-master-theme": "7",
 		"greenpeace/planet4-plugin-gutenberg-blocks": "dev-PLANET-7508_fix-highlighted-cta-layout"
 	},
 	"scripts": {
@@ -11,5 +11,25 @@
 		"site:custom": [
 			"@install:plugin-wpimport"
 		]
-	}
+	},
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "greenpeace/planet4-master-theme",
+				"type": "wordpress-theme",
+				"autoload": {
+					"psr-4": {
+						"P4\\MasterTheme\\": "src/"
+					}
+				},
+				"extra": null,
+				"version": 7,
+				"dist": {
+					"type": "zip",
+					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/d44314556c72faf59587b86209445b4e3941b60a.zip"
+				}
+			}
+		}
+	]
 }
