@@ -3,6 +3,6 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "dev-main"
+		"greenpeace/planet4-master-theme": "dev-PLANET-8064-PHP8.3"
 	}
 }
