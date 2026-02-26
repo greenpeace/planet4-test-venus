@@ -3,28 +3,8 @@
 	"description": "Greenpeace P4 test-venus",
 	"license": "MIT",
 	"require": {
-		"greenpeace/planet4-master-theme": "7"
+		"greenpeace/planet4-master-theme": "dev-main"
 	},
-	"repositories": [
-		{
-			"type": "package",
-			"package": {
-				"name": "greenpeace/planet4-master-theme",
-				"type": "wordpress-theme",
-				"autoload": {
-					"psr-4": {
-						"P4\\MasterTheme\\": "src/"
-					}
-				},
-				"extra": null,
-				"version": 7,
-				"dist": {
-					"type": "zip",
-					"url": "https://storage.googleapis.com/planet4-packages/planet4-master-theme/4697d6a9c1d30e1de2c5697e2b0994cf35aa0267.zip"
-				}
-			}
-		}
-	],
 	"scripts": {
 		"install:plugin-ai-chatbot": "wp plugin install --activate https://storage.googleapis.com/planet4-3rdparty-plugins/swayam-ai-chatbot_1.0.0.zip",
 		"site:custom": [
